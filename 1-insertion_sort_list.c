@@ -27,14 +27,14 @@ listint_t *swap(listint_t **node)
 return (temp);
 }
 /**
-*insertion_sort_list: sorts a dobuly linked list of integers- insertion sorts
+*insertion_sort_list - sorts a dobuly linked list of integers- insertion sorts
 *@list: linked list
 */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *temp, *temp2;
 
-	if (list == NULL &&  *list == NULL)
+	if (list == NULL || *list == NULL)
 		return;
 
 	temp = *list;
@@ -61,7 +61,6 @@ void insertion_sort_list(listint_t **list)
 			}
 			else
 				temp2 = temp2->prev;
-			
 		}
 	temp2 = NULL;
 	temp = temp->next;
