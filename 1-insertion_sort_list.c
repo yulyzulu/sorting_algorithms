@@ -34,12 +34,11 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *temp, *temp2;
 
-	temp = *list;
-	temp2 = NULL;
-
 	if (list == NULL &&  *list == NULL)
 		return;
 
+	temp = *list;
+	temp2 = NULL;
 	while (temp->next)
 	{
 		if (temp->n > temp->next->n)
